@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Study Media – Students Ka Digital Adda</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --deep-blue: #0077B6;
+      --sky-blue: #00B4D8;
+      --aqua-cyan: #48CAE4;
+      --light-blue: #90E0EF;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: var(--deep-blue);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .intro {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background: var(--sky-blue);
+      animation: fadeOut 3s ease 4.5s forwards;
+      text-align: center;
+    }
+
+    .intro img {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 15px;
+      animation: popIn 2s ease;
+    }
+
+    .intro h1 {
+      font-size: 2.5em;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px #000;
+      animation: popIn 2s ease;
+    }
+
+    .intro p {
+      margin-top: 10px;
+      font-size: 1.2em;
+      color: var(--light-blue);
+      animation: fadeInUp 2s ease 1s;
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    .main-content {
+      padding: 40px 20px;
+      display: none;
+      animation: slideUp 1s ease forwards;
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .main-content.show {
+      display: block;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: var(--aqua-cyan);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .feature {
+      margin-bottom: 30px;
+      background: rgba(255,255,255,0.05);
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 5px solid var(--light-blue);
+    }
+
+    .feature h3 {
+      color: var(--sky-blue);
+    }
+
+    .notify-box {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .notify-input {
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      width: 80%;
+      max-width: 300px;
+      margin-bottom: 10px;
+    }
+
+    .notify-btn {
+      background: var(--aqua-cyan);
+      padding: 10px 25px;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .confirmation {
+      margin-top: 10px;
+      color: var(--light-blue);
+      font-size: 0.95em;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Intro Animation -->
+  <div class="intro" id="intro">
+    <img src="logo.png" alt="Study Media Logo">
+    <h1>Study Media</h1>
+    <p>Students ka Digital Adda</p>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content" id="mainContent">
+    <h2>App Features</h2>
+
+    <div class="feature">
+      <h3>1. Topic Search AI</h3>
+      <p>Students can search any topic across any subject. Our smart AI instantly fetches and displays the most relevant, well-explained content — saving students' time and effort.</p>
+    </div>
+
+    <div class="feature">
+      <h3>2. Doubt Solver</h3>
+      <p>Have a question? Ask anything! Our AI-powered assistant gives clear, detailed, and step-by-step explanations across all subjects.</p>
+    </div>
+
+    <div class="feature">
+      <h3>3. Photo to Summary</h3>
+      <p>Students can upload an image or a chapter snapshot, and the AI will automatically generate an easy-to-understand explanation and summarized notes for quick revision.</p>
+    </div>
+
+    <div class="feature">
+      <h3>4. Smart MCQ Generator</h3>
+      <p>Just enter the chapter name, class, and topic. The system will generate up to 100 multiple-choice questions with answers — personalized for your syllabus and difficulty level.</p>
+    </div>
+
+    <div class="feature">
+      <h3>5. Premium Note Maker</h3>
+      <p>With a premium upgrade, students can auto-generate personalized notes. Choose your format: Q&A, bullet points, or paragraph summaries.</p>
+    </div>
+
+    <div class="feature">
+      <h3>6. Online Study Chat</h3>
+      <p>A unique feature where students can connect with others from the same class or board, chat, and discuss study topics together — like a digital study group!</p>
+    </div>
+
+    <div class="feature">
+      <h3>7. Language Learning Hub</h3>
+      <p>Interactive English learning modules — vocabulary, grammar, spoken practice, and more — all gamified for better learning.</p>
+    </div>
+
+    <div class="feature">
+      <h3>8. Study Goal Tracker</h3>
+      <p>Students can set study targets and deadlines. The app creates smart to-do lists, tracks progress, and even rewards users when goals are completed on time.</p>
+    </div>
+
+    <div class="feature">
+      <h3>9. Personal Problem Support</h3>
+      <p>Students can share personal issues (study pressure, family stress, etc.) via a private chat feature, and get proper guidance & motivation from trained mentors or AI suggestions.</p>
+    </div>
+
+    <div class="notify-box">
+      <input type="email" id="emailInput" class="notify-input" placeholder="Enter your email">
+      <br>
+      <button onclick="showConfirm()" class="notify-btn">📩 Notify Me</button>
+      <p class="confirmation" id="confirmationText" style="display:none;">We will notify you when the app launches 🚀</p>
+    </div>
+  </div>
+
+  <footer>© 2025 Study Media | Powered by Miskat Haider</footer>
+
+  <script>
+    // Show main content after intro
+    setTimeout(() => {
+      document.getElementById("mainContent").classList.add("show");
+    }, 4700);
+
+    function showConfirm() {
+      let email = document.getElementById("emailInput").value;
+      if (email && email.includes("@")) {
+        document.getElementById("confirmationText").style.display = "block";
+      } else {
+        alert("Please enter a valid email address.");
+      }
+    }
+  </script>
+
+</body>
+</html>
